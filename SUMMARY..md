@@ -5,4 +5,5 @@
 * [default + rest + spread](default_+_rest_+_spread.md)
 * [destructuring](destructuring.md)
 * [strings](strings.md)
+* iterators
 
