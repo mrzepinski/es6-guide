@@ -7,4 +7,5 @@
 * [strings](strings.md)
 * [iterators](iterators.md)
 * [generators](generators.md)
+* classes and inheritance
 
