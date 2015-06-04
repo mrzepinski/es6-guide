@@ -6,4 +6,5 @@
 * [destructuring](destructuring.md)
 * [strings](strings.md)
 * [iterators](iterators.md)
+* generators
 
