@@ -1,7 +1,10 @@
 {
     "plugins": [
-        "gtm",
         "ga"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {
+        "ga": {
+            "token": "UA-40223443-9"
+        }
+    }
 }
