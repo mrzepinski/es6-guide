@@ -43,7 +43,7 @@ Thanks to the use of transpilers (Babel, Traceur and others) we can actually use
 ES6 Repl in Chrome Devl Tools - [Scratch JS](https://chrome.google.com/webstore/detail/scratch-js/alploljligeomonipppgaahpkenfnfkn)
 
 ```
-Future is bright.```
-
+Future is bright.
+```
 
 People from the community denounced these words. I have only one to add: we can handle it easily!
