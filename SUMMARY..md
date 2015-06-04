@@ -7,5 +7,5 @@
 * [strings](strings.md)
 * [iterators](iterators.md)
 * [generators](generators.md)
-* classes and inheritance
+* [classes and inheritance](classes_and_inheritance.md)
 
