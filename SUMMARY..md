@@ -10,5 +10,5 @@
 * [classes and inheritance](classes_and_inheritance.md)
 * [modules](modules.md)
 * [promises](promises.md)
-* set, map, weak
+* [set, map, weak](set,_map,_weak.md)
 
