@@ -1,6 +1,8 @@
-# es6-guide
+# ES6-guide
 
 **ECMAScript 6 (ES6) guide**
+
+** CHECK SUMMARY TO SEE TABLE OF CONTENT **
 
 I want to share with you some thoughts, snippets of code and tell you a little about the upcoming **ES6**. It’s my own road to know it before it will be a standard.
 
