@@ -9,4 +9,5 @@
 * [generators](generators.md)
 * [classes and inheritance](classes_and_inheritance.md)
 * [modules](modules.md)
+* promises
 
