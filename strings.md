@@ -64,11 +64,11 @@ ES6 gives us full support for **Unicode** within strings and regular expressions
 Let's see an example:
 
 ```javascript
-let str = 'í¡‚í¾·';
+let str = 'ð ®·'
 console.log(str.length);             // 2
 console.log(str === '\uD842\uDFB7'); // true
 ```
-You can see that character **í¡‚í¾·** is represented by two 16-bit code units. It's a surrogate pair in which we have a single code point represented by two code units. The length of that string is also 2.
+You can see that character **ð ®·*** represented by two 16-bit code units. It's a surrogate pair in which we have a single code point represented by two code units. The length of that string is also 2.
 
 **Surrogate pairs are used in UTF-16 to represent code points above U+FFFF.**
 
@@ -94,8 +94,8 @@ It works the same as **charCodeAt()** except for non-BMP characters.
 We can also do a reverse operation with another new method added to ES6: **fromCodePoint()**.
 
 ```javascript
-console.log(String.fromCodePoint(134071));  // "í¡‚í¾·"
-console.log(String.fromCodePoint(0x20BB7)); // "í¡‚í¾·"
+console.log(String.fromCodePoint(134071));  // "ð ®·"
+console.log(String.fromCodePoint(0x20BB7)); // "ð ®·"
 ```
 **Unicode code unit escape sequences consist of six characters, namely \u plus four hexadecimal digits, and contribute one code unit.**
 
@@ -106,7 +106,7 @@ Dealing with that two definitions, above example could be represented by one cod
 
 ```javascript
 // ES6 way
-console.log('\u{20BB7}'); // í¡‚í¾·
+console.log('\u{20BB7}'); // ð ®·
 console.log('\u{20BB7}' === '\uD842\uDFB7'); // true
 // ES5 way
 console.log('\u20BB7); // 7!
@@ -135,7 +135,7 @@ for (let c of str) {
   console.log(c); // a
                   // b
                   // c
-                  // í¡‚í¾·
+                  // ð ®·
 }
 ```
 We can also use **spread** operator to transform string into array with full Unicode support.
@@ -143,7 +143,7 @@ We can also use **spread** operator to transform string into array with full Uni
 ```javascript
 let str = 'abc\uD842\uDFB7';
 let chars = [â€¦str];
-console.log(chars); // ['a', 'b', 'c', 'í¡‚í¾·']
+console.log(chars); // ['a', 'b', 'c', 'ð ®·']
 ```
 ## new string methods
 
