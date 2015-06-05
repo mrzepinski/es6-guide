@@ -49,7 +49,7 @@ In JavaScript, a variable can be declared after it has been used. In other words
 
 One more rule, more aware: JavaScript only hoists declarations, not initializations.
 
-```
+```javascript
 // scope and variable hoisting
  
 var n = 1;
@@ -69,7 +69,7 @@ Let’s look for the new keywords in JavaScript ECMAScript 2015: **let** and **c
 
 We can imagine that **let** is a new var statement. What is the difference? let is block scoped. Let’s see an example:
 
-```
+```javascript
 // ES6 — let
  
 let a = 1;
@@ -108,7 +108,7 @@ You can also use **BabelJS repl** or **Traceur repl** and compare results.
 
 **const** is single-assignment and like a **let**, block-scoped declaration.
 
-```
+```javascript
 // ES6 const
  
 {
@@ -123,7 +123,7 @@ const cannot be reinitialized. It will throw an Error when we try to assign anot
 
 Let’s look for the equivalent in ES5:
 
-```
+```javascript
 // ES5 const
  
 var PI = (function () {
