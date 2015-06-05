@@ -1,6 +1,6 @@
 # let + const
 
-First topic about ECMAScript 2015 is **let + const**. If you are familiar with JavaScript, you have probably known the term: **scope**. If you are not that lucky, don’t worry about it. I’ll explain that in a few words below.
+First topic about ECMAScript 2015 is **let + const**. If you are familiar with JavaScript, you have probably known the term: **scope**. If you are not that lucky, don't worry about it. I'll explain that in a few words below.
 
 Why I mentioned something about JavaScript **scope**? This is because **let** and **const** have a very strong connection with that word. Firstly, imagine and old way (and still valid) to declare a new variable in your JS code using ES5:
 
@@ -35,19 +35,19 @@ console.log(window.d); // undefined
 
 1. We can see that variable **a** is declared as global. Nothing surprising.
 
-2. Variable **b** is inside an **if block**, but in JavaScript it doesn’t create new scope. If you are familiar with other languages, you can be disappointed, but this is JavaScript and it works as you see.
+2. Variable **b** is inside an **if block**, but in JavaScript it doesn't create new scope. If you are familiar with other languages, you can be disappointed, but this is JavaScript and it works as you see.
 
 3. The next statement is a **for loop**. **C** variable is declared in this for loop, but also in global scope.
 
-4. Until variable **d** is declared in his own scope. It’s inside a function and only **function creates new scopes**.
+4. Until variable **d** is declared in his own scope. It's inside a function and only **function creates new scopes**.
 
 **Variables in JavaScript are hoisted to the top!**
 
-**Hoisting** is JavaScript’s default behavior of moving all declarations to the top of the current scope (**to the top of the current script** or **the current function**).
+**Hoisting** is JavaScript's default behavior of moving all declarations to the top of the current scope (**to the top of the current script** or **the current function**).
 
 In JavaScript, a variable can be declared after it has been used. In other words - a variable can be used before it has been declared!
 
-One more rule, more aware: JavaScript only hoists declarations, not initializations.
+One more rule, more aware: JavaScript only hoists declarations, not initialization.
 
 ```javascript
 // scope and variable hoisting
@@ -63,11 +63,11 @@ var n = 1;
 console.log(n);
 ```
 
-Let’s look for the new keywords in JavaScript ECMAScript 2015: **let** and **const**.
+Let's look for the new keywords in JavaScript ECMAScript 2015: **let** and **const**.
 
 ## let
 
-We can imagine that **let** is a new var statement. What is the difference? let is block scoped. Let’s see an example:
+We can imagine that **let** is a new var statement. What is the difference? let is block scoped. Let's see an example:
 
 ```javascript
 // ES6 — let
@@ -121,7 +121,7 @@ console.log(PI); // throws ReferenceError: PI is not defined
 
 const cannot be reinitialized. It will throw an Error when we try to assign another value.
 
-Let’s look for the equivalent in ES5:
+Let's look for the equivalent in ES5:
 
 ```javascript
 // ES5 const
