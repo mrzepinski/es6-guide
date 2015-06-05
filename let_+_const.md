@@ -4,7 +4,7 @@ First topic about ECMAScript 2015 is **let + const**. If you are familiar with J
 
 Why I mentioned something about JavaScript **scope**? This is because **let** and **const** have a very strong connection with that word. Firstly, imagine and old way (and still valid) to declare a new variable in your JS code using ES5:
 
-```
+```javascript
 // ES5
  
 var a = 1;
