@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "ga"
+        "ga",
+        "leanpub-affiliate"
     ],
     "pluginsConfig": {
         "ga": {
