@@ -37,6 +37,7 @@ for (let val of generator()) {
                     // 'done?'
 }
 ```
+
 As you can see, the generator has four **yield** statements. Each returns a value, pauses execution and moves to the next yield when **next()** method is called. Calling a function produces an object for controlling generator execution, a so-called **generator object**.
 
 Use is similar to iterators. We have **next()** method as I mentioned above and we can even use it with **for-of** loop.
@@ -55,9 +56,11 @@ console.log(rand.next());
 console.log(rand.next());
 // …
 ```
+
 Generator has never ending **while** loop. It produces random numbers every time when you call **next()** method.
 
 ES5 implementation:
+
 ```javascript
 function random1_10 () {
   return {
@@ -74,7 +77,9 @@ console.log(rand.next());
 console.log(rand.next());
 // …
 ```
+
 We can also mix generators together:
+
 ```javascript
 function* random (max) {
   yield Math.floor(Math.random() * max) + 1;
@@ -89,4 +94,5 @@ console.log(rand.next());
 console.log(rand.next());
 // …
 ```
+
 **random1_20** generator returns random values from 1 to 20. It uses **random** generator inside to create random number each time when yield statement is reached.
