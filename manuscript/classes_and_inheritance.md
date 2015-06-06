@@ -27,6 +27,7 @@ let car = new Vehicle('Tesla', 'car');
 console.log(car.getName()); // Tesla
 console.log(car.getType()); // car
 ```
+
 It's naive example, but we can see a new keywords as: class and constructor.
 
 ES5 equivalent could be something like this:
@@ -48,6 +49,7 @@ var car = new Vehicle('Tesla', 'car');
 console.log(car.getName()); // Tesla
 console.log(car.getType()); // car
 ```
+
 **Classes support prototype-based inheritance, super calls, instance and static methods and constructors.**
 
 It's simple. We instantiate our classes the same way, but let's add some..
@@ -82,6 +84,7 @@ var car = new Car('Tesla');
 console.log(car.getName()); // It is a car: Tesla
 console.log(car.getType()); // car
 ```
+
 And now look at the ES6 version:
 
 ```javascript
@@ -116,6 +119,7 @@ let car = new Car('Tesla');
 console.log(car.getName()); // It is a car: Tesla
 console.log(car.getType()); // car
 ```
+
 We see how easy is to implement inheritance with ES6. It's finally looking like in other OO programing languages. We use **extends** to inherit from another class and the **super** keyword to call the parent class (function). Moreover, **getName()** method was overridden in sub-class **Car**.
 
 **super — previously to achieve such functionality in Javascript required the use of call or apply**
@@ -147,6 +151,7 @@ let car = Vehicle.create('Tesla', 'car');
 console.log(car.getName()); // Tesla
 console.log(car.getType()); // car
 ```
+
 Classes gives us an opportunity to create static members. We don't have to use the **new** keyword later to instantiate a class.
 
 static methods (properties) are also inherited
@@ -177,6 +182,7 @@ console.log(car.name); // Tesla
 car.name = 'BMW';
 console.log(car.name); // BMW
 ```
+
 I use '_' prefix to create a (**tmp**) field to store name property.
 
 ## Enhanced Object Properties
@@ -200,6 +206,7 @@ var x = 1,
     };
 console.log(obj); // Object { x: 1, y: 2 }
 ```
+
 As you can see, this works because the property value has the same name as the property identifier.
 
 Another thing is ES6 support for **computed names** in object property definitions:
@@ -222,6 +229,7 @@ var getKey = function () {
 obj['key_' + getKey()] = 123;
 console.log(obj); // Object { foo: 'bar', key_123: 123 }
 ```
+
 The one last thing is **method properties** seen in classes above. We can even use it in object definitions:
 ```javascript
 // ES6
