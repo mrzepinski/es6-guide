@@ -16,7 +16,7 @@ How does it look? It's a signature:
 (param1, param2) => { block }
 ```
 
-.. and it could be translated to:
+..and it could be translated to:
 
 
 ```javascript
@@ -38,7 +38,7 @@ Instead of writing:
 });
 ```
 
-.. you can write smomething like this:
+..you can write smomething like this:
 
 
 ```javascript

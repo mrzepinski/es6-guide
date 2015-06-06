@@ -23,13 +23,16 @@ export function multiply (x, y) {
   return x * y;
 };
 ```
+
 We can also export a function stored in a variable, but we have to wrap the variable in a set of curly braces.
+
 ```javascript
 var multiply = function (x, y) {
   return x * y;
 };
 export { multiply };
 ```
+
 We can even export many objects and like in the above example — we have to wrap exported statements in a set of curly braces if we use one export keyword.
 
 ```javascript
@@ -44,6 +47,7 @@ var hello = 'Hello World',
     };
 export { hello, multiply };
 ```
+
 Let's just imagine that we have **modules.js** file with all exported statements. To import them in another file (**in the same directory**) we use … **import { .. } from** .. syntax:
 
 ```javascript
@@ -66,6 +70,7 @@ import { multiply as pow2 } from 'modules';
 ```javascript
 import * from 'modules';
 ```
+
 ## Default export
 
 In our module we can have many named exports, but we can also have a **default export**. It's because our module could be a large library and with default export we can import then an entire module. It could be also useful when our module has single value or model (class / constructor).
@@ -77,6 +82,7 @@ export default function (x, y) {
   return x * y;
 };
 ```
+
 This time we don’t have to use curly braces for importing and we have a chance to name imported statement as we wish.
 
 ```javascript
@@ -88,6 +94,7 @@ import pow2 from 'modules';
 ```
 
 **Module can have both named exports and a default export.**
+
 ```javascript
 // modules.js
 export hello = 'Hello World';
@@ -97,6 +104,7 @@ export default function (x, y) {
 // app.js
 import pow2, { hello } from 'modules';
 ```
+
 **The default export is just a named export with the special name default.**
 
 ```javascript
