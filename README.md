@@ -52,4 +52,4 @@ Future is bright.
 
 People from the community denounced these words. I have only one to add: we can handle it easily!
 
-![](photo-1416431168657-a6c4184348ab.jpg)
+![](future-is-bright.jpg)
