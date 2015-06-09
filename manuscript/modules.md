@@ -2,7 +2,7 @@
 
 Today we have a couple of ways to create **modules**, export & import them. JavaScript doesn't have any built-in module loader yet. Upcoming ECMAScript 2015 standard gives us a reason to make people happy. Finally ;)
 
-We have third party standards: **CommonJS** and **AMD**. The most popular, but unfortunately incompatible standards for module loaders.
+We have third party standards: **CommonJS** and **AMD**. The most popular, but, unfortunately, incompatible standards for module loaders.
 
 **CommonJS is known from [Node.js](https://nodejs.org/). It's mostly dedicated for servers and it supports synchronous loading. It also has a compact syntax focused on export and require keywords.**
 
@@ -73,7 +73,7 @@ import * from 'modules';
 
 ## Default export
 
-In our module we can have many named exports, but we can also have a **default export**. It's because our module could be a large library and with default export we can import then an entire module. It could be also useful when our module has single value or model (class / constructor).
+In our module, we can have many named exports, but we can also have a **default export**. It's because our module could be a large library and with default export we can import then an entire module. It could be also useful when our module has single value or model (class / constructor).
 
 **One default export per module.**
 
