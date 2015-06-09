@@ -35,9 +35,9 @@ console.log(window.d); // undefined
 
 1. We can see that variable **a** is declared as global. Nothing surprising.
 
-2. Variable **b** is inside an **if block**, but in JavaScript it doesn't create new scope. If you are familiar with other languages, you can be disappointed, but this is JavaScript and it works as you see.
+2. Variable **b** is inside an **if block**, but in JavaScript it doesn't create a new scope. If you are familiar with other languages, you can be disappointed, but this is JavaScript and it works as you see.
 
-3. The next statement is a **for loop**. **C** variable is declared in this for loop, but also in global scope.
+3. The next statement is a **for loop**. **C** variable is declared in this for loop, but also in the global scope.
 
 4. Until variable **d** is declared in his own scope. It's inside a function and only **function creates new scopes**.
 
@@ -98,7 +98,7 @@ console.log(window.c); // undefined
 console.log(window.d); // undefined
 ```
 
-As we can see, this time only variable **a** is declared as a global. **let** gives us a way to declare block-scoped variables, which is undefined outside it.
+As we can see, this time only variable **a** is declared as a global. **let** gives us a way to declare block scoped variables, which is undefined outside it.
 
 **I use Chrome (stable version) with #enable-javascript-harmony flag enabled. Visit chrome://flags/#enable-javascript-harmony, enable this flag, restart Chrome and you will get many new features.**
 
