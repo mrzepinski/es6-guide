@@ -2,11 +2,11 @@
 
 **Destructuring** is one more little addition to the upcoming JavaScript standard, which helps us write code more flexibly and effectively.
 
-It allows binding using pattern matching. We can use it for matching arrays and objects. It's similar to standard object look up and returns **undefined**, when value is not found.
+It allows binding using pattern matching. We can use it for matching arrays and objects. It's similar to standard object look up and returns **undefined** when value is not found.
 
 ## arrays
 
-Today it's common to see code such as this.
+Today it's common to see the code such as this.
 
 ```javascript
 // ES5
@@ -143,7 +143,7 @@ let point = {
 { x: a } = point; // throws error
 ```
 
-We have to wrap it in parantheses. Just that ☺
+We have to wrap it in parentheses. Just that ☺
 
 ```javascript
 let point = {
