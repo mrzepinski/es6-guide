@@ -109,7 +109,7 @@ function sum(…numbers, last) { // causes a syntax error
 
 ## spread
 
-**Spread** is closely related to rest parameters, because of **…** (three dots) notation. It allows to split an array to single arguments which is passed to the function as separate arguments.
+The **spread** is closely related to rest parameters, because of **…** (three dots) notation. It allows to split an array to single arguments which are passed to the function as separate arguments.
 
 Let's define our **sum** function an pass **spread** to it:
 
@@ -121,7 +121,7 @@ var args = [1, 2, 3];
 console.log(sum(…args)); // 6
 ```
 
-ES5 equivalet is:
+ES5 equivalent is:
 
 ```javascript
 function sum(a, b, c) {
@@ -131,7 +131,7 @@ var args = [1, 2, 3];
 console.log(sum.apply(undefined, args)); // 6
 ```
 
-Instead using **apply** function, we can just type **…args** and pass all array argument separately.
+Instead using an **apply** function, we can just type **…args** and pass all array argument separately.
 
 We can also mix standard arguments with spread operator:
 
