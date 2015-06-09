@@ -38,7 +38,7 @@ Instead of writing:
 });
 ```
 
-..you can write smomething like this:
+..you can write something like this:
 
 
 ```javascript
