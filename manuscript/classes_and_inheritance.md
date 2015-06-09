@@ -28,7 +28,7 @@ console.log(car.getName()); // Tesla
 console.log(car.getType()); // car
 ```
 
-It's naive example, but we can see a new keywords as: class and constructor.
+It's naive example, but we can see a new keywords as class and constructor.
 
 ES5 equivalent could be something like this:
 
@@ -120,7 +120,7 @@ console.log(car.getName()); // It is a car: Tesla
 console.log(car.getType()); // car
 ```
 
-We see how easy is to implement inheritance with ES6. It's finally looking like in other OO programing languages. We use **extends** to inherit from another class and the **super** keyword to call the parent class (function). Moreover, **getName()** method was overridden in sub-class **Car**.
+We see how easy is to implement inheritance with ES6. It's finally looking like in other OO programming languages. We use **extends** to inherit from another class and the **super** keyword to call the parent class (function). Moreover, **getName()** method was overridden in subclass **Car**.
 
 **super — previously to achieve such functionality in Javascript required the use of call or apply**
 
@@ -152,14 +152,14 @@ console.log(car.getName()); // Tesla
 console.log(car.getType()); // car
 ```
 
-Classes gives us an opportunity to create static members. We don't have to use the **new** keyword later to instantiate a class.
+Classes give us an opportunity to create static members. We don't have to use the **new** keyword later to instantiate a class.
 
 static methods (properties) are also inherited
 and could be called by super
 
 ## get / set
 
-Another great things in upcoming ES6 are **getters** and **setters** for object properties. They allow us to run the code on the reading or writing of a property.
+Other great things in upcoming ES6 are **getters** and **setters** for object properties. They allow us to run the code on the reading or writing of a property.
 
 ```javascript
 class Car {
@@ -187,7 +187,7 @@ I use '_' prefix to create a (**tmp**) field to store name property.
 
 ## Enhanced Object Properties
 
-The last thing I have to mention are **property shorthand**, **computed property names** and **method properties**.
+The last thing I have to mention is **property shorthand**, **computed property names** and **method properties**.
 
 ES6 gives us shorter syntax for common **object property** definition:
 
