@@ -14,7 +14,7 @@ let sumTpl = `${x} + ${y} = ${x + y}`;
 console.log(sumTpl); // 1 + 2 = 3
 ```
 
-As you can see, we can inject values to string by using **${value}** syntax. Another thing to consider is **grave accent** - a char under the tilde (~) on keyboard. A template literal string must be wrapped by it, to work properly.
+As you can see, we can inject values to string by using **${value}** syntax. Another thing to consider is **grave accent** - a char under the tilde (~) on a keyboard. A template literal string must be wrapped by it, to work properly.
 
 The example above is an equivalent (in ES5) to simply (Babel version):
 
@@ -126,7 +126,7 @@ Adding u flag allows to correctly match the string by characters instead of code
 
 ## strings are iterable
 
-Strings are iterable by using **for-of** loop which I will cover in more detail in iterators article later. I write about it now because it enumerate Unicode code points and each may comprise one or two characters.
+Strings are iterable by using the **for-of** loop which I will cover in more detail in iterators article later. I write about it now because it enumerate Unicode code points and each may comprise one or two characters.
 
 ```javascript
 let str = 'abc\uD842\uDFB7';
@@ -138,7 +138,7 @@ for (let c of str) {
                   // 𠮷
 }
 ```
-We can also use **spread** operator to transform string into array with full Unicode support.
+We can also use **spread** operator to transform string into an array with full Unicode support.
 
 ```javascript
 let str = 'abc\uD842\uDFB7';
