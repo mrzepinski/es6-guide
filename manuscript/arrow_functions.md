@@ -1,6 +1,6 @@
 # arrow functions
 
-A new syntactic sugar which ES6 brings us soon, called **arrow functions** (also known as a fat arrow function). It's a shorter syntax compared to function expressions and lexically binds the **this** value.
+A new syntactic sugar which ES6 brings us soon, called **arrow functions** (also known as a fat arrow function). It's a shorter syntax compared to function expressions and lexically binds **this** value.
 
 REMEMBER - **Arrow functions are always anonymous.**
 
@@ -58,7 +58,7 @@ No more **bind**, **call** and **apply**! No more:
 var self = this;
 ```
 
-It solves a major painpoint (from my point of view) and has the added bonus of improving performance through JavaScript engine optimizations.
+It solves a major pain point (from my point of view) and has the added bonus of improving performance through JavaScript engine optimizations.
 
 
 ```javascript
