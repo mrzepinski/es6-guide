@@ -42,7 +42,7 @@ As you can see, the generator has four **yield** statements. Each returns a valu
 
 Use is similar to iterators. We have **next()** method as I mentioned above and we can even use it with **for-of** loop.
 
-Below is an example of an generator called **random1_10**, which returns random numbers from 1 to 10.
+Below is an example of a generator called **random1_10**, which returns random numbers from 1 to 10.
 
 
 ```javascript
