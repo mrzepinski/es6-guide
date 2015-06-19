@@ -75,7 +75,7 @@ Vehicle.prototype.getType = function getType () {
 };
 
 function Car (name) {
-  Vehicle.call(this, name, ‘car’);
+  Vehicle.call(this, name, 'car');
 }
 
 Car.prototype = Object.create(Vehicle.prototype);

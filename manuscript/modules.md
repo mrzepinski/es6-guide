@@ -90,7 +90,7 @@ export default function (x, y) {
 };
 ```
 
-This time we don’t have to use curly braces for importing and we have a chance to name imported statement as we wish.
+This time we don't have to use curly braces for importing and we have a chance to name imported statement as we wish.
 
 ```javascript
 import multiply from 'modules';

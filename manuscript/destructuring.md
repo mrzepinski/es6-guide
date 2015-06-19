@@ -141,7 +141,7 @@ console.log(a); // 1
 console.log(b); // undefined
 ```
 
-**If we try to omit var, let or const, it will throw an error, because block code can‘t be destructuring assignment.**
+**If we try to omit var, let or const, it will throw an error, because block code can't be destructuring assignment.**
 
 ```javascript
 let point = {

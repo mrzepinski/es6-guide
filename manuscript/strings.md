@@ -51,7 +51,7 @@ console.log(types); // Number
                     // Object
 ```
 
-The last thing is access the **raw template string** content where backslashes are not interpreted. We don’t have equivalent in ES5 here.
+The last thing is access the **raw template string** content where backslashes are not interpreted. We don't have equivalent in ES5 here.
 
 ```javascript
 let interpreted = 'raw\nstring';
