@@ -15,6 +15,7 @@ function inc(number, increment) {
   increment = increment || 1;
   return number + increment;
 }
+
 console.log(inc(2, 2)); // 4
 console.log(inc(2));    // 3
 ```
@@ -29,6 +30,7 @@ ES6 version of **inc** function looks like this:
 function inc(number, increment = 1) {
   return number + increment;
 }
+
 console.log(inc(2, 2)); // 4
 console.log(inc(2));    // 3
 ```
@@ -39,6 +41,7 @@ You can also set default values to parameters that appear **before arguments** w
 function sum(a, b = 2, c) {
   return a + b + c;
 }
+
 console.log(sum(1, 5, 10));         // 16 -> b === 5
 console.log(sum(1, undefined, 10)); // 13 -> b as default
 ```
@@ -49,9 +52,11 @@ You can even execute a function to set default parameter. It's not restricted to
 function getDefaultIncrement() {
   return 1;
 }
+
 function inc(number, increment = getDefaultIncrement()) {
   return number + increment;
 }
+
 console.log(inc(2, 2)); // 4
 console.log(inc(2));    // 3
 ```
@@ -69,6 +74,7 @@ function sum() {
    });
    return result;
 }
+
 console.log(sum(1));             // 1
 console.log(sum(1, 2, 3, 4, 5)); // 15
 ```
@@ -91,6 +97,7 @@ function sum(…numbers) {
   });
   return result;
 }
+
 console.log(sum(1)); // 1
 console.log(sum(1, 2, 3, 4, 5)); // 15
 ```
@@ -117,6 +124,7 @@ Let's define our **sum** function an pass **spread** to it:
 function sum(a, b, c) {
   return a + b + c;
 }
+
 var args = [1, 2, 3];
 console.log(sum(…args)); // 6
 ```
@@ -127,6 +135,7 @@ ES5 equivalent is:
 function sum(a, b, c) {
   return a + b + c;
 }
+
 var args = [1, 2, 3];
 console.log(sum.apply(undefined, args)); // 6
 ```
@@ -139,6 +148,7 @@ We can also mix standard arguments with spread operator:
 function sum(a, b, c) {
   return a + b + c;
 }
+
 var args = [1, 2];
 console.log(sum(…args, 3)); // 6
 ```

@@ -13,7 +13,7 @@ Today it's common to see the code such as this.
 var point = [1, 2];
 var xVal = point[0],
     yVal = point[1];
- 
+
 console.log(xVal); // 1
 console.log(yVal); // 2
 ```
@@ -24,12 +24,12 @@ ES6 gives us destructuring of arrays into individual variables during assignment
 // ES6
 let point = [1, 2];
 let [xVal, yVal] = point;
- 
+
 console.log(xVal); // 1
 console.log(yVal); // 2
 // .. and reverse!
 [xVal, yVal] = [yVal, xVal];
- 
+
 console.log(xVal); // 2
 console.log(yVal); // 1
 ```
@@ -39,6 +39,7 @@ We can even omit some values..
 ```javascript
 let threeD = [1, 2, 3];
 let [a, , c] = threeD;
+
 console.log(a); // 1
 console.log(c); // 3
 ```
@@ -48,6 +49,7 @@ console.log(c); // 3
 ```javascript
 let nested = [1, [2, 3], 4];
 let [a, [b], d] = nested;
+
 console.log(a); // 1
 console.log(b); // 2
 console.log(d); // 4
@@ -63,6 +65,7 @@ let point = {
   y: 2
 };
 let { x: a, y: b } = point;
+
 console.log(a); // 1
 console.log(b); // 2
 ```
@@ -79,6 +82,7 @@ let point = {
   }
 };
 let { x: a, y: b, z: { one: c, two: d } } = point;
+
 console.log(a); // 1
 console.log(b); // 2
 console.log(c); // 3
@@ -96,6 +100,7 @@ let mixed = {
   values: [3, 4, 5]
 };
 let { one: a, two: b, values: [c, , e] } = mixed;
+
 console.log(a); // 1
 console.log(b); // 2
 console.log(c); // 3
@@ -113,6 +118,7 @@ function mixed () {
   };
 }
 let { one: a, two: b, values: [c, , e] } = mixed();
+
 console.log(a); // 1
 console.log(b); // 2
 console.log(c); // 3
@@ -130,6 +136,7 @@ let point = {
   x: 1
 };
 let { x: a, y: b } = point;
+
 console.log(a); // 1
 console.log(b); // undefined
 ```
@@ -140,6 +147,7 @@ console.log(b); // undefined
 let point = {
   x: 1
 };
+
 { x: a } = point; // throws error
 ```
 
@@ -150,8 +158,6 @@ let point = {
   x: 1
 };
 ({ x: a } = point);
+
 console.log(a); // 1
 ```
-
-
-

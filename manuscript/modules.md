@@ -30,6 +30,7 @@ We can also export a function stored in a variable, but we have to wrap the vari
 var multiply = function (x, y) {
   return x * y;
 };
+
 export { multiply };
 ```
 
@@ -40,11 +41,14 @@ export hello = 'Hello World';
 export function multiply (x, y) {
   return x * y;
 };
+
 // === OR ===
+
 var hello = 'Hello World',
     multiply = function (x, y) {
       return x * y;
     };
+
 export { hello, multiply };
 ```
 
@@ -53,6 +57,7 @@ Let's just imagine that we have **modules.js** file with all exported statements
 ```javascript
 import { hello } from 'modules';
 ```
+
 **We can omit .js extension just like in CommonJS and AMD.**
 
 We can even import many statements:
@@ -60,11 +65,13 @@ We can even import many statements:
 ```javascript
 import { hello, multiply } from 'modules';
 ```
+
 Imports may also be **aliased**:
 
 ```javascript
 import { multiply as pow2 } from 'modules';
 ```
+
 ..and use **wildcard** (*) to import all exported statemets:
 
 ```javascript
@@ -87,9 +94,13 @@ This time we don’t have to use curly braces for importing and we have a chance
 
 ```javascript
 import multiply from 'modules';
+
 // === OR ===
+
 import pow2 from 'modules';
+
 // === OR ===
+
 ...
 ```
 
@@ -101,6 +112,7 @@ export hello = 'Hello World';
 export default function (x, y) {
   return x * y;
 };
+
 // app.js
 import pow2, { hello } from 'modules';
 ```
@@ -112,6 +124,7 @@ import pow2, { hello } from 'modules';
 export default function (x, y) {
   return x * y;
 };
+
 // app.js
 import { default } from 'modules';
 ```
@@ -134,6 +147,3 @@ Module loader should support:
 * Nested virtualization
 
 * Compilation hooks
-
-
-

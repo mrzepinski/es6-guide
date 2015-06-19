@@ -6,26 +6,26 @@ Why I mentioned something about JavaScript **scope**? This is because **let** an
 
 ```javascript
 // ES5
- 
+
 var a = 1;
- 
+
 if (1 === a) {
- var b = 2; 
+  var b = 2;
 }
- 
+
 for (var c = 0; c < 3; c++) {
- // …
+  // …
 }
- 
+
 function letsDeclareAnotherOne() {
- var d = 4;
+  var d = 4;
 }
- 
+
 console.log(a); // 1
 console.log(b); // 2
 console.log(c); // 3
 console.log(d); // ReferenceError: d is not defined
- 
+
 // window
 console.log(window.a); // 1
 console.log(window.b); // 2
@@ -51,15 +51,15 @@ One more rule, more aware: JavaScript only hoists declarations, not initializati
 
 ```javascript
 // scope and variable hoisting
- 
+
 var n = 1;
- 
+
 (function () {
- console.log(n);
- var n = 2;
- console.log(n);
+  console.log(n);
+  var n = 2;
+  console.log(n);
 })();
- 
+
 console.log(n);
 ```
 
@@ -71,26 +71,26 @@ We can imagine that **let** is a new var statement. What is the difference? let 
 
 ```javascript
 // ES6 — let
- 
+
 let a = 1;
- 
+
 if (1 === a) {
- let b = 2; 
+  let b = 2;
 }
- 
+
 for (let c = 0; c < 3; c++) {
- // …
+  // …
 }
- 
+
 function letsDeclareAnotherOne() {
- let d = 4;
+  let d = 4;
 }
- 
+
 console.log(a); // 1
 console.log(b); // ReferenceError: b is not defined
 console.log(c); // ReferenceError: c is not defined
 console.log(d); // ReferenceError: d is not defined
- 
+
 // window
 console.log(window.a); // 1
 console.log(window.b); // undefined
@@ -110,12 +110,12 @@ You can also use **BabelJS repl** or **Traceur repl** and compare results.
 
 ```javascript
 // ES6 const
- 
+
 {
- const PI = 3.141593;
- PI = 3.14; // throws “PI” is read-only
+  const PI = 3.141593;
+  PI = 3.14; // throws “PI” is read-only
 }
- 
+
 console.log(PI); // throws ReferenceError: PI is not defined
 ```
 
@@ -125,10 +125,9 @@ Let's look for the equivalent in ES5:
 
 ```javascript
 // ES5 const
- 
+
 var PI = (function () {
- var PI = 3.141593;
- return function () { return PI; };
+  var PI = 3.141593;
+  return function () { return PI; };
 })();
 ```
-

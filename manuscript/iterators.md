@@ -14,8 +14,10 @@ ES6 gives us a pattern for creating custom iterators and it has a similar implem
 // Symbol
 let s1 = Symbol('abc');
 let s2 = Symbol('abc');
+
 console.log(s1 !== s2); // true
 console.log(typeof s1); // 'symbol'
+
 let obj = {};
 obj[s1] = 'abc';
 console.log(obj); // Object { Symbol(abc): 'abc' }
@@ -42,6 +44,7 @@ let random1_10 = function (items = 1) {
     }
   };
 };
+
 for (let n of random1_10(5)) {
   console.log(n); // prints 5 random numbers
 }
@@ -60,7 +63,7 @@ let random1_10 = function (items = 1) {
         next() {
           if (cur === items) {
             return {
-              done: true 
+              done: true
             }
           }
           ++cur;
@@ -73,6 +76,7 @@ let random1_10 = function (items = 1) {
     }
   };
 };
+
 for (let n of random1_10(5)) {
  console.log(n); // prints 5 random numbers
 }
@@ -94,6 +98,7 @@ It's similar to **for-in** loop, which can be used to iterate through object pro
 
 ```javascript
 const arr = [1, 2, 3, 4, 5];
+
 for (let item of arr) {
   console.log(item); // 1
                      // 2
@@ -107,6 +112,7 @@ Inside the for-of loop, we can even use a **break**, **continue** and **return**
 
 ```javascript
 const arr = [1, 2, 3, 4, 5];
+
 for (let item of arr) {
   if (item > 4) {
     break;
@@ -118,4 +124,3 @@ for (let item of arr) {
                      // 4
 }
 ```
-

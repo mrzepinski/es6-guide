@@ -12,6 +12,7 @@ How does it look? It's a signature:
 ([param] [, param]) => {
  statements
 }
+
            param => expression
 (param1, param2) => { block }
 ```
@@ -23,6 +24,7 @@ How does it look? It's a signature:
     () => { … }       // no argument
      x => { … }       // one argument
 (x, y) => { … }       // several arguments
+
 x => { return x * x } // block
 x => x * x            // expression, same as above
 ```
@@ -34,7 +36,7 @@ Instead of writing:
 
 ```javascript
 [3, 4, 5].map(function (n) {
- return n * n;
+  return n * n;
 });
 ```
 
@@ -60,27 +62,23 @@ var self = this;
 
 It solves a major pain point (from my point of view) and has the added bonus of improving performance through JavaScript engine optimizations.
 
-
 ```javascript
 // ES5
 function FancyObject() {
  var self = this;
- 
+
  self.name = 'FancyObject';
  setTimeout(function () {
   self.name = 'Hello World!';
  }, 1000);
 }
-```
 
-
-```javascript
 // ES6
 function FancyObject() {
- this.name = 'FancyObject';
- setTimeout(() => {
-  this.name = 'Hello World!'; // properly refers to FancyObject
- }, 1000);
+  this.name = 'FancyObject';
+  setTimeout(() => {
+    this.name = 'Hello World!'; // properly refers to FancyObject
+  }, 1000);
 }
 ```
 
@@ -99,8 +97,3 @@ function FancyObject() {
 * Regular functions can be **named**.
 
 * Functions declarations are **hoisted** (can be used before they are declared).
-
-
-
-
-

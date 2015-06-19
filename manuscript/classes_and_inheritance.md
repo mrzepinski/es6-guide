@@ -8,21 +8,22 @@
 
 ```javascript
 class Vehicle {
- 
+
   constructor (name, type) {
     this.name = name;
     this.type = type;
   }
- 
+
   getName () {
     return this.name;
   }
- 
+
   getType () {
     return this.type;
   }
- 
+
 }
+
 let car = new Vehicle('Tesla', 'car');
 console.log(car.getName()); // Tesla
 console.log(car.getType()); // car
@@ -37,14 +38,15 @@ function Vehicle (name, type) {
   this.name = name;
   this.type = type;
 };
- 
+
 Vehicle.prototype.getName = function getName () {
   return this.name;
 };
- 
+
 Vehicle.prototype.getType = function getType () {
   return this.type;
 };
+
 var car = new Vehicle('Tesla', 'car');
 console.log(car.getName()); // Tesla
 console.log(car.getType()); // car
@@ -63,23 +65,26 @@ function Vehicle (name, type) {
   this.name = name;
   this.type = type;
 };
- 
+
 Vehicle.prototype.getName = function getName () {
   return this.name;
 };
- 
+
 Vehicle.prototype.getType = function getType () {
   return this.type;
 };
+
 function Car (name) {
   Vehicle.call(this, name, ‘car’);
 }
+
 Car.prototype = Object.create(Vehicle.prototype);
 Car.prototype.constructor = Car;
 Car.parent = Vehicle.prototype;
 Car.prototype.getName = function () {
   return 'It is a car: '+ this.name;
 };
+
 var car = new Car('Tesla');
 console.log(car.getName()); // It is a car: Tesla
 console.log(car.getType()); // car
@@ -89,32 +94,34 @@ And now look at the ES6 version:
 
 ```javascript
 class Vehicle {
- 
+
   constructor (name, type) {
     this.name = name;
     this.type = type;
   }
- 
+
   getName () {
     return this.name;
   }
- 
+
   getType () {
     return this.type;
   }
- 
+
 }
+
 class Car extends Vehicle {
- 
+
   constructor (name) {
     super(name, 'car');
   }
- 
+
   getName () {
     return 'It is a car: ' + super.getName();
   }
- 
+
 }
+
 let car = new Car('Tesla');
 console.log(car.getName()); // It is a car: Tesla
 console.log(car.getType()); // car
@@ -128,25 +135,26 @@ We see how easy is to implement inheritance with ES6. It's finally looking like 
 
 ```javascript
 class Vehicle {
- 
+
   constructor (name, type) {
     this.name = name;
     this.type = type;
   }
- 
+
   getName () {
     return this.name;
   }
- 
+
   getType () {
     return this.type;
   }
- 
+
   static create (name, type) {
     return new Vehicle(name, type);
   }
- 
+
 }
+
 let car = Vehicle.create('Tesla', 'car');
 console.log(car.getName()); // Tesla
 console.log(car.getType()); // car
@@ -163,22 +171,24 @@ Other great things in upcoming ES6 are **getters** and **setters** for object pr
 
 ```javascript
 class Car {
- 
+
   constructor (name) {
     this._name = name;
-  } 
- 
+  }
+
   set name (name) {
     this._name = name;
   }
- 
+
   get name () {
     return this._name;
   }
- 
+
 }
+
 let car = new Car('Tesla');
 console.log(car.name); // Tesla
+
 car.name = 'BMW';
 console.log(car.name); // BMW
 ```
@@ -196,7 +206,9 @@ ES6 gives us shorter syntax for common **object property** definition:
 let x = 1,
     y = 2,
     obj = { x, y };
+
 console.log(obj); // Object { x: 1, y: 2 }
+
 // ES5
 var x = 1,
     y = 2,
@@ -204,6 +216,7 @@ var x = 1,
       x: x,
       y: y
     };
+
 console.log(obj); // Object { x: 1, y: 2 }
 ```
 
@@ -218,7 +231,9 @@ let getKey = () => '123',
       foo: 'bar',
       ['key_' + getKey()]: 123
     };
+
 console.log(obj); // Object { foo: 'bar', key_123: 123 }
+
 // ES5
 var getKey = function () {
       return '123';
@@ -227,10 +242,12 @@ var getKey = function () {
       foo: 'bar'
     };
 obj['key_' + getKey()] = 123;
+
 console.log(obj); // Object { foo: 'bar', key_123: 123 }
 ```
 
 The one last thing is **method properties** seen in classes above. We can even use it in object definitions:
+
 ```javascript
 // ES6
 let obj = {
@@ -239,7 +256,10 @@ let obj = {
     return this.name;
   }
 };
+
+
 console.log(obj.toString()); // object name
+
 // ES5
 var obj = {
   name: 'object name',
@@ -247,5 +267,6 @@ var obj = {
     return this.name;
   }
 };
+
 console.log(obj.toString()); // object name
 ```

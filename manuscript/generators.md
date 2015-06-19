@@ -14,22 +14,24 @@ Why? Take a look:
 
 ```javascript
 function* generator () {
-  yield 1; 
+  yield 1;
   // pause
-  yield 2; 
+  yield 2;
   // pause
-  yield 3; 
+  yield 3;
   // pause
-  yield 'done?'; 
+  yield 'done?';
   // done
 }
 let gen = generator(); // [object Generator]
+
 console.log(gen.next()); // Object {value: 1, done: false}
 console.log(gen.next()); // Object {value: 2, done: false}
 console.log(gen.next()); // Object {value: 3, done: false}
 console.log(gen.next()); // Object {value: 'done?', done: false}
 console.log(gen.next()); // Object {value: undefined, done: true}
 console.log(gen.next()); // Object {value: undefined, done: true}
+
 for (let val of generator()) {
   console.log(val); // 1
                     // 2
@@ -51,6 +53,7 @@ function* random1_10 () {
     yield Math.floor(Math.random() * 10) + 1;
   }
 }
+
 let rand = random1_10();
 console.log(rand.next());
 console.log(rand.next());
@@ -72,6 +75,7 @@ function random1_10 () {
     }
   };
 }
+
 let rand = random1_10();
 console.log(rand.next());
 console.log(rand.next());
@@ -84,11 +88,13 @@ We can also mix generators together:
 function* random (max) {
   yield Math.floor(Math.random() * max) + 1;
 }
+
 function* random1_20 () {
   while (true) {
     yield* random(20);
   }
 }
+
 let rand = random1_20();
 console.log(rand.next());
 console.log(rand.next());
